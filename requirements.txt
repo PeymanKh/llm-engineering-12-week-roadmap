@@ -4,3 +4,4 @@ langchain~=1.0.0a3
 langchain-openai~=0.3.32
 langchain-google-genai~=2.1.10
 langchain-core~=0.3.75
+langgraph~=0.6.6
