@@ -1,0 +1,8 @@
+{
+  "dependencies": [
+    "codes"
+  ],
+  "graphs": {
+    "simple_react_agent": "codes.simple_react_agent.simple_react_agent:graph"
+  }
+}
