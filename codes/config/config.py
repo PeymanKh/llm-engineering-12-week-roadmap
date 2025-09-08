@@ -88,23 +88,6 @@ class ModelConfig(BaseModel):
     )
 
 
-class LangChainConfig(BaseModel):
-    """
-    Langchain configuration.
-
-    Attributes:
-        project_name: Langchain project name
-        api_key: Langchain API key
-    """
-    project_name: SecretStr = Field(
-        default="llm-engineering-12-week",
-        description="Langchain project name"
-    )
-    api_key: SecretStr = Field(
-        description="Langchain API key"
-    )
-
-
 class SystemConfig(BaseSettings):
     """
     Main application configuration with environment-based loading.
@@ -163,10 +146,23 @@ class SystemConfig(BaseSettings):
         description="Log message format string"
     )
 
+    langsmith_project: str = Field(
+        ...,
+        description="LangSmith project name"
+    )
+    langsmith_api_key: str = Field(
+        ...,
+        description="LangSmith API key"
+    )
+    langchain_tracing_v2: bool = Field(
+        default=True,
+        description="Langsmith Tracing"
+    )
+
+
     # External Service Configurations
     database: DatabaseConfig
     model: ModelConfig
-    langchain: LangChainConfig
 
     def is_production(self) -> bool:
         """Check if running in production environment."""

@@ -1,8 +1,8 @@
 {
-  "dependencies": [
-    "codes"
-  ],
+  "dependencies": ["notes"],
   "graphs": {
-    "simple_react_agent": "codes.simple_react_agent.simple_react_agent:graph"
-  }
+    "chat-bot": "notes/langgraph_components/professional_message_handling.py:graph"
+  },
+  "env": ".env"
+
 }
