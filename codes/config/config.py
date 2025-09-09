@@ -159,6 +159,11 @@ class SystemConfig(BaseSettings):
         description="Langsmith Tracing"
     )
 
+    tavily_api_key: SecretStr = Field(
+        ...,
+        description="Tavily API key"
+    )
+
 
     # External Service Configurations
     database: DatabaseConfig

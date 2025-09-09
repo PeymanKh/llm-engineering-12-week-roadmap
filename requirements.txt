@@ -3,6 +3,7 @@ pydantic~=2.11.7
 langchain-core~=0.3.75
 langchain-openai~=0.3.32
 langchain~=1.0.0a3
+langchain-community~=0.3.29
 langchain-google-genai~=2.1.10
 typing_extensions~=4.15.0
 langgraph~=0.6.6
