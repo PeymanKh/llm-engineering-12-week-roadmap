@@ -154,6 +154,7 @@ class SystemConfig(BaseSettings):
         ...,
         description="LangSmith API key"
     )
+
     langchain_tracing_v2: bool = Field(
         default=True,
         description="Langsmith Tracing"
@@ -163,6 +164,12 @@ class SystemConfig(BaseSettings):
         ...,
         description="Tavily API key"
     )
+
+    openai_api_key: SecretStr = Field(
+        ...,
+        description="OpenAI API key"
+    )
+
 
 
     # External Service Configurations
